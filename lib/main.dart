@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:namer_app/pages/MyHomePage.dart';
 import 'package:provider/provider.dart';
 
-import 'pages/FavoritePage.dart';
-
 void main() {
   runApp(MyApp());
 }
