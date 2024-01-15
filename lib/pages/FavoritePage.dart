@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:string_extensions/string_extensions.dart';
 
 import '../main.dart';
 
@@ -15,12 +16,7 @@ class FavoritesPage extends StatelessWidget {
     }
 
     IconData FavIcon(word) {
-      IconData icon;
-      if (appState.favorites.contains(word)) {
-        return icon = Icons.favorite;
-      } else {
-        return icon = Icons.favorite_border;
-      }
+      return appState.favorites.contains(word) ? Icons.favorite : Icons.favorite_border;
     }
 
     var favorites = appState.favorites;
@@ -34,7 +30,7 @@ class FavoritesPage extends StatelessWidget {
           ),
           for (var fav in favorites)
             ListTile(
-              title: Text(fav.asLowerCase),
+              title: Text("${fav.first.capitalize} ${fav.second.capitalize}"),
               leading: IconButton(
                 icon: Icon(
                   FavIcon(fav),
