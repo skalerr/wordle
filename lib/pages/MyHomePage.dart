@@ -29,6 +29,8 @@ class _MyHomePageState extends State<MyHomePage> {
         throw UnimplementedError("no widget for $selectedIndex :((");
     }
 
+    // The container for the current page, with its background color
+    // and subtle switching animation.
     var mainArea = ColoredBox(
       color: colorScheme.surfaceVariant,
       child: AnimatedSwitcher(
