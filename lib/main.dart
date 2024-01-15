@@ -1,7 +1,7 @@
-import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:namer_app/pages/MyHomePage.dart';
 import 'package:provider/provider.dart';
+import 'package:russian_words/russian_words.dart';
 
 void main() {
   runApp(MyApp());

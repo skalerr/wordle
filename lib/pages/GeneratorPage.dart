@@ -1,8 +1,9 @@
-import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:russian_words/russian_words.dart';
 import '../main.dart';
 import 'HistoryViewPage.dart';
+import 'package:string_extensions/string_extensions.dart';
 
 class GeneratorPage extends StatelessWidget {
   @override
@@ -83,11 +84,11 @@ class BigCard extends StatelessWidget {
               child: Wrap(
                 children: [
                   Text(
-                    pairWord.first,
+                    pairWord.first.capitalize!,
                     style: style.copyWith(fontWeight: FontWeight.w200),
                   ),
                   Text(
-                    pairWord.second,
+                    " ${pairWord.second.capitalize!}",
                     style: style.copyWith(fontWeight: FontWeight.bold),
                   )
                 ],
